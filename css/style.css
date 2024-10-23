@@ -1,0 +1,655 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    background: #000;
+    margin: 0;
+    font-family: "Kanit", sans-serif;
+    scroll-behavior: smooth;
+    color: #fff;
+    list-style: none;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 30px;
+    background: none;
+}
+
+ul {
+    background: none;
+}
+
+li {
+    background: none;
+}
+
+i {
+    background: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: right;
+    position: fixed;
+    top: 0;
+    padding-right: 50px;
+    padding-top: 15px;
+    width: 100vw;
+    gap: 10px;
+    z-index: 1;
+}
+
+.nav-btn {
+    padding: 10px 10px;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* home */
+
+.home-content {
+    padding-left: 100px;
+}
+
+.home-content-top {
+    color: #fff;
+    font-size: 50px;
+    font-weight: 250;
+}
+
+.home-content-mid {
+    font-size: 90px;
+    overflow: hidden; /* Ensures the text is not visible until animated */
+    border-right: .1em solid greenyellow; /* Creates the cursor effect */
+    white-space: nowrap; /* Prevents the text from wrapping to the next line */
+    letter-spacing: .01em; /* Adds space between letters */
+    animation: typing 4s steps(40, end) infinite, blink-caret .75s step-end infinite;
+}
+
+.home-content-bottom {
+    color: #fff;
+    font-size: 50px;
+    font-weight: 250;
+}
+
+.about-section {
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgb(255, 255, 255) 80%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: none;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 900px;
+    margin: 20px;
+}
+
+.profile-pic {
+    background: transparent;
+}
+
+.profile-pic img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid #fff;
+}
+
+/* about me */
+
+.about-me {
+    background: none;
+    border-radius: 10px;
+}
+
+.about-me h1 {
+    background: none;
+    margin-top: 0;
+    font-size: 2.5em;
+    color: #292929;
+}
+
+.about-me p {
+    background: none;
+    color: #525252;
+    line-height: 1.6;
+    font-size: 1.5em;
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0 20px;
+}
+
+/* about me end */
+
+/* edu */
+
+.edu-section {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.skdw-con {
+    background: none;
+    display: flex;
+    align-content: center;
+    height: 350px;
+    gap: 30px;
+    position: relative;
+    right: 120px;
+}
+
+.skdw-img {
+    background: none;
+    background-image: url("../img/forweblightlogo.png");
+    width: 300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.skdw-paragraph {
+    display: flex;
+    position: relative;
+    background: none;
+    align-items: center;
+    font-size: 30px;
+    width: 600px;
+    top: -30px;
+    text-align: center;
+}
+
+.ged-con {
+    background: none;
+    position: relative;
+    display: flex;
+    position: relative;
+    align-content: center;
+    height: 225px;
+    gap: 40px;
+    left: 90px;
+    bottom: -50px;
+}
+
+.ged-img {
+    background: none;
+    background-image: url("../img/ged.png");
+    width: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.ged-paragraph {
+    display: flex;
+    background: none;
+    align-items: center;
+    font-size: 30px;
+    width: 600px;
+    text-align: center;
+}
+
+.skdw-con {
+    opacity: 0;
+    transform: translateX(-100px); /* Default state for .skdw-con */
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.ged-con {
+    opacity: 0;
+    transform: translateX(0px); /* Default state for .skdw-con */
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.skdw-con.fade-in-left {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.ged-con.fade-in-right {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* edu end */
+
+/* stats */
+
+.stats-section {
+    display: flex;
+    gap: 15px;
+    align-items: lef;
+    margin-bottom: 100px;
+    padding-top: 10vh;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+}
+
+.stats-con {
+    background: linear-gradient(180deg, rgba(41, 41, 41, 0.575) 0%, rgba(57, 57, 57, 0.862) 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 20px;
+    border-radius: 10px;
+    width: 30em;
+}
+
+.stat {
+    background: rgb(32, 32, 32);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.stat-bar {
+    background: #9b9b9b1a;
+}
+
+.stat-label {
+    background: none;
+    position: relative;
+    z-index: 2;
+}
+
+.stat-level {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+    width: 0;
+    transition: width 2s ease;
+    background-color: inherit;
+    position: relative;
+}
+
+.stat-level .percent {
+    position: relative;
+    z-index: 2;
+    margin-left: 10px;
+    background: none;
+}
+
+.html, .css, .js, .jquery, .php, .python, .mysql, .lua {
+    background: inherit; /* ให้ใช้สีพื้นหลังจาก parent */
+    width: 0; /* เริ่มต้นที่ 0 */
+    transition: width 2s ease; /* ทำให้การเปลี่ยนแปลงความกว้างนุ่มนวล */
+    position: relative; /* ช่วยในการจัดการกับการแสดงผล */
+}
+
+.html {
+    background: #FF3300;
+}
+
+.css {
+    background: #0062FF;
+}
+
+.js {
+    background: #ffd900;
+    color: #000;
+}
+
+.jquery {
+    background: #23abe2;
+}
+
+.php {
+    background: #777bb3;
+}
+
+.python {
+    background: linear-gradient(143deg, rgba(0,50,255,1) 0%, rgba(255, 234, 0, 0.772) 100%);
+}
+
+.mysql {
+    background: linear-gradient(143deg, rgba(0, 51, 255, 0.655) 0%, rgba(255, 162, 0, 0.772) 100%);
+}
+
+.bootstrap {
+    background: rgba(119,17,240,255);
+}
+
+.lua {
+    background: #00007f;
+}
+
+.skills-con {
+    background: linear-gradient(180deg, rgba(41, 41, 41, 0.575) 0%, rgba(57, 57, 57, 0.862) 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 20px;
+    border-radius: 10px;
+    width: 30em;
+}
+
+.skill {
+    background: none;
+    padding-bottom: 25px;
+    border-bottom: #ccc solid .5px;
+}
+
+.skill-title {
+    display: flex;
+    align-items: center;
+    background: none;
+    font-size: 25px;
+}
+
+.skill-icon {
+    width: 100px;
+    height: 100px;
+    background: none;
+}
+
+.skill-label {
+    background: none;
+}
+
+.description {
+    background: none;
+}
+
+.big-rungmaark {
+    background-image: url("../img/rungmaark.png");
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: 700px;
+    position: relative;
+}
+
+/* stats end */
+
+/* certificates */
+
+.projects-section {
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 7.5vh;
+    margin-bottom: 5em;
+}
+
+.projects-title {
+    font-size: 70px;
+    position: relative;
+    top: 20px;
+}
+
+.projects-con {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 1200px;
+    column-gap: 200px;
+    row-gap: 25px;
+    flex-wrap: wrap;
+    top: 30px;
+}
+
+.projects-img {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.project-title {
+    font-size: 25px;
+}
+
+.project-1 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: none;
+    row-gap: 10px;
+    transition: transform 0.25s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.project-1:hover {
+    transform: scale(1.05); /* ขยายเล็กน้อยตอน hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
+}
+
+.project-1 .projects-img {
+    background-image: url("../img/national_certificate.jpg");
+    width: 440px;
+    height: 330px;
+}
+
+.project-2:hover {
+    transform: scale(1.05); /* ขยายเล็กน้อยตอน hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
+}
+
+.project-2 {
+    display: flex;
+    flex-direction: column;
+    background: none;
+    align-items: center;
+    row-gap: 10px;
+    transition: transform 0.25s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.project-2 .projects-img {
+    background-image: url("../img/provincial_certificate.jpg");
+    width: 440px;
+    height: 330px;
+}
+
+.project-3 {
+    display: flex;
+    flex-direction: column;
+    background: none;
+    align-items: center;
+    row-gap: 10px;
+    transition: transform 0.25s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.project-3:hover {
+    transform: scale(1.05); /* ขยายเล็กน้อยตอน hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
+}
+
+.project-3 .projects-img {
+    background-image: url("../img/librarian.jpg");
+    width: 440px;
+    height: 330px;
+}
+
+.project-4 {
+    display: flex;
+    flex-direction: column;
+    background: none;
+    align-items: center;
+    row-gap: 10px;
+    transition: transform 0.25s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.project-4:hover {
+    transform: scale(1.05); /* ขยายเล็กน้อยตอน hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
+}
+
+.project-4 .projects-img {
+    background-image: url("../img/trafic.jpg");
+    width: 440px;
+    height: 330px;
+}
+
+.project-5 {
+    display: flex;
+    flex-direction: column;
+    background: none;
+    align-items: center;
+    row-gap: 10px;
+    transition: transform 0.25s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.project-5:hover {
+    transform: scale(1.05); /* ขยายเล็กน้อยตอน hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
+}
+
+.project-5 .projects-img {
+    background-image: url("../img/deploma.jpg");
+    width: 440px;
+    height: 330px;
+}
+
+.custom-alert {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9); /* สีขาวโปร่งใส */
+    border-radius: 15px; /* ขอบโค้ง */
+    border: 2px solid black;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* เพิ่มเงา */
+    z-index: 1001; /* ให้อยู่เหนือ backdrop */
+    max-width: 80vw; /* กำหนดขนาดสูงสุด */
+    text-align: center;
+    transition: opacity 0.3s ease, transform 0.3s ease; /* เพิ่ม transition */
+}
+
+.custom-alert img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: bold;
+    color: #333;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    display: none;
+    transition: opacity 0.3s ease;
+}
+
+.backdrop.active {
+    display: block;
+    opacity: 1;
+}
+
+/* certificates end */
+
+/* footer */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background: rgb(12,62,40);
+    background: linear-gradient(80deg, rgba(12,62,40,1) 0%, rgba(12,69,43,1) 99%);
+    width: 100vw;
+    height: 50vh;
+    align-items: center;
+}
+
+.footer-title {
+    background: none;
+    font-size: 55px;
+}
+
+.contacts-con {
+    display: flex;
+    flex-direction: column;
+    background: none;
+    gap: 10px;
+    text-align: center;
+    border-bottom: #fff solid 1px;
+    padding-bottom: 20px;
+    width: 500px;
+    margin-bottom: 20px;
+}
+
+.contact {
+    background: none;
+    font-size: 18px;
+}
+
+.sm-con {
+    background: none;
+    display: flex;
+    column-gap: 20px;
+}
+
+.sm {
+    width: 50px;
+    height: 50px;
+    background: none;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* footer end */
+
+@media (max-width: 600px) {
+    .profile-pic img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .about-me h1 {
+        font-size: 2em;
+    }
+
+    .about-me p {
+        font-size: 1em;
+        padding: 0 10px;
+    }
+}
+
+@keyframes typing {
+    0% { width: 0 }
+    70% { width: 100% }
+    90% { width: 100% }
+    100% { width: 0 }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: greenyellow }
+}
