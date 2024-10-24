@@ -25,6 +25,8 @@ session_start();
             <a href="#certificates" class="nav-btn">Certificates</a>
         </nav>
 
+        <h1>test</h1>
+
         <!-- home section start -->
         <section class="home-section" id="home">
             <div class="home-content">
